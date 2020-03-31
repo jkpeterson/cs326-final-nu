@@ -11,4 +11,4 @@ As of March 30, 2020, over 30,000 people have died from confirmed cases of COVID
 Our goal for this project is to create a website that collects coronavirus news and information from official sources and presents them in one place. Our focus will primarily be on the United States. Additionally, we are using news articles to create a timeline of when different states in the United States started to take this pandemic seriously. For example, what was the number of affected cases when Massachusetts declared an emergency? 
 
 ## Important Components
-a brief paragraph or two explaining the functions provided by some of the components of your final projects.  
+It will have a news feed featuring recent articles about COVID-19 from a variety of sources.  It will also feature a timeline showing the increases in cases in various selectable states on a map of the United States.  This timeline will also feature articles about actions the governments of these states have taken and when. 
