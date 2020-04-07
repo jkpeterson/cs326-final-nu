@@ -1,9 +1,9 @@
 # Corona Watch by Team Nu
 
 ## Team Overview
-Julia Peterson (https://github.com/jkpeterson)  
-Robert Powell (https://github.com/ParsnipPizza)  
-Sheikh Noohery (https://github.com/noohery)  
+Julia Peterson ([jkpeterson](https://github.com/jkpeterson))    
+Robert Powell ([ParsnipPizza](https://github.com/ParsnipPizza))  
+Sheikh Noohery ([noohery](https://github.com/noohery))  
 
 ## Data Interactions  
 Please outline the interactions between your users and the data. If your idea remains the same as what you submitted for Milestone 0, this will be the same. If not, please update this document with a bulleted list of the data interactions. This information will all be in docs/milestone1.md  
