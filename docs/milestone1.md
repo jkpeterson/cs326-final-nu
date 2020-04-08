@@ -11,11 +11,11 @@ We are creating a website to that helps people stay informed about the COVID-19 
 ## Data Interactions  
 The users of our website will interact with the data in the following ways:  
 + All regular users will view the default news feed and the timeline
-+ An user with an account can:
++ An user with an account can: 
+    - select custom news sources for their news feed
     - Set visual preferences 
         + custom themes
         + light mode/dark mode
-    - select custom news sources for their news feed
 
 ## Wireframes  
 Your team must collaboratively design and draw wireframes for your proposed website. The wireframes can be hand drawn or made using a program. Use these wireframes in tandem with your written explanation above to clearly demonstrate the vision for your application to the course staff. Please include your wireframes in the document you will make for this milestone called docs/milestone1.md
