@@ -27,9 +27,57 @@ https://wireframe.cc/
 https://app.diagrams.net/  
 
 ## HTML and CSS  
-Your team must also come up with a polished web interface with HTML and CSS code. We are requiring that you use Bootstrap for the layout of your HTML elements. You can also include some Javascript code to polish up some animations and user interaction. Please include a screenshot of your HTML page inside your milestone Markdown file docs/milestone1.md  
+Base HTML mockup, 1:49, 4/8
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        #Header{
+            background-color: darksalmon;
+        }
+        #Map{
+            float: left;
+        }
+        #Timeline{
+            float: center;
+        }
+        img {
+            border: 1px solid #ddd;
+            border-radius: 1px;
+        }
+        .responsive {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+<head>
+  <title>COVID19 News Center</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
 
-Resources for HTML and CSS:  
-https://developer.mozilla.org/en-US/docs/Web/HTML  
-https://developer.mozilla.org/en-US/docs/Web/CSS  
-https://getbootstrap.com/docs/4.4/layout/overview/  
+<div class="container" id = "Header">
+  <h1>Coronavirus News Center</h1>
+  <p>News feed, infection map, health warnings etc</p>
+</div>
+
+<div class = "container-fluid">
+    <div class = "row">
+        <div class="col-lg-6">
+            <div class="container-fluid" id = "Map">
+                <h2>Offical infection map</h2>
+                <img src="https://static01.nyt.com/images/2020/03/03/us/coronavirus-us-cases-map-promo-1583277425489/coronavirus-us-cases-map-promo-1583277425489-videoSixteenByNineJumbo1600-v310.png" class="responsive"><img>
+                <a href="https://www.nytimes.com/interactive/2020/world/coronavirus-maps.html">Click here for a detailed map</a>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class= "container-fluid" id = "Timeline">News Timeline
+                <h2>Last updated</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
