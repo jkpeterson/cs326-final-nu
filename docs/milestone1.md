@@ -26,4 +26,7 @@ https://gimp.org/
 https://wireframe.cc/  
 https://app.diagrams.net/  
 
+![example image](images/Map_Wireframe.png)
+![example image](images/NewsFeed_Wireframe.png)
+
 ## HTML and CSS  
