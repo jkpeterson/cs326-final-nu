@@ -7,9 +7,6 @@
         #Map{
             float: left;
         }
-        #Timeline{
-            float: center;
-        }
         img {
             border: 1px solid #ddd;
             border-radius: 1px;
@@ -17,6 +14,23 @@
         .responsive {
             width: 100%;
             height: auto;
+        }
+        .sidenav {
+            width: 130px;
+            position: fixed;
+            z-index: 1;
+            top: 20;
+            left: 10;
+            background-color:darksalmon;
+            overflow-x: hidden;
+            padding: 20px 0px;
+        }
+        .sidenav a {
+            padding: 6px;
+             text-decoration: none;
+             font-size: 25px;
+            color:black;
+            display: block;
         }
     </style>
 <head>
@@ -26,6 +40,9 @@
 </head>
 <body>
 
+<div class="sidenav">
+        <a href="#">Login</a>
+</div>
 <div class="container" id = "Header">
   <h1>Coronavirus News Center</h1>
   <p>News feed, infection map, health warnings etc</p>
@@ -36,7 +53,7 @@
         <div class="col-lg-6">
             <div class="container-fluid" id = "Map">
                 <h2>Offical infection map</h2>
-                <img src="MapExample" class="responsive"><img>
+                <img src="MapExample.png" class="responsive"><img>
                 <a href="https://www.nytimes.com/interactive/2020/world/coronavirus-maps.html">Click here for a link to a detailed map</a>
             </div>
         </div>
@@ -51,8 +68,9 @@
     </div>
 
 </div>
+    
 <div>
-
+    <button id = "login">Login</button>
 </div>
 
 </body>
