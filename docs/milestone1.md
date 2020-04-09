@@ -30,5 +30,5 @@ https://app.diagrams.net/
 ![example image](images/NewsFeed_Wireframe.png)
 
 ## HTML and CSS  
-![example image](images/Map_Screenshot.png)
-![example image](images/Newsfeed_Screenshot.png)
+![example image](images/Map_Screenshot.PNG)
+![example image](images/Newsfeed_Screenshot.PNG)
