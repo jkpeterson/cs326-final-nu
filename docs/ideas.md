@@ -3,7 +3,7 @@
 ## Team Overview
 Julia Peterson  
 Robert Powell  
-Sheikh Noohery (https://github.com/noohery)  
+Sheikh Noohery (noohery)  
 
 ## Innovative Idea 
 As of March 30, 2020, over 30,000 people have died from confirmed cases of COVID-19. The pandemic has been affecting people's livelihoods around the world in severe ways. Suitably, there are multiple websites from various sources that are informing people with the latest news and scientific discoveries on COVID-19. For example, the [World Health Organization website](https://www.who.int/emergencies/diseases/novel-coronavirus-2019) displays the global statistics of coronavirus and reports how countries around the world are dealing with the pandemic. On a national scale, there are websites like the [CDC's Coronavirus Webpage](https://www.cdc.gov/coronavirus/2019-nCoV/index.html) that provide information for people in residing within respective countries. There are also numerous webpages from cities that provide the same information on a local scale.  
