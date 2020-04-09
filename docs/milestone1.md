@@ -32,3 +32,8 @@ https://app.diagrams.net/
 ## HTML and CSS  
 ![example image](images/Map_Screenshot.PNG)
 ![example image](images/Newsfeed_Screenshot.PNG)
+
+## Labor Division
+Julia Peterson - Wireframes, edits to HTML and CSS
+Robert Powell - Main HTML and CSS dev
+Sheikh Noohery - Data Interactions
