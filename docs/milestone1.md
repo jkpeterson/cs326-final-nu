@@ -18,14 +18,6 @@ The users of our website will interact with the data in the following ways:
         + light mode/dark mode
 
 ## Wireframes  
-Your team must collaboratively design and draw wireframes for your proposed website. The wireframes can be hand drawn or made using a program. Use these wireframes in tandem with your written explanation above to clearly demonstrate the vision for your application to the course staff. Please include your wireframes in the document you will make for this milestone called docs/milestone1.md
-
-Resources for making your wireframes (you can also hand-draw them!)  
-https://whimsical.com/wireframes  
-https://gimp.org/  
-https://wireframe.cc/  
-https://app.diagrams.net/  
-
 ![example image](images/Map_Wireframe.png)
 ![example image](images/NewsFeed_Wireframe.png)
 
