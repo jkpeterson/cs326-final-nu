@@ -35,5 +35,7 @@ https://app.diagrams.net/
 
 ## Labor Division
 Julia Peterson - Wireframes, edits to HTML and CSS
+
 Robert Powell - Main HTML and CSS dev
+
 Sheikh Noohery - Data Interactions
