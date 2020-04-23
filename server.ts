@@ -59,9 +59,9 @@ export class MyServer {
 	await this.readCounter(request.params['userId']+"-"+request.body.source, response);
    }
     
-	/* private async updateHandler(request, response) : Promise<void> {
+	private async updateHandler(request, response) : Promise<void> {
 	await this.updateCounter(request.params['userId']+"-"+request.body.name, request.body.value, response);
-    } */
+    } 
 
     private async deleteHandler(request, response) : Promise<void> {
 	await this.deleteCounter(request.params['userId']+"-"+request.body.source, response);
@@ -73,9 +73,10 @@ export class MyServer {
 
     public async addNewsource(source: string, response) : Promise<void> {
 	console.log("Added Source: " + source);
-	await this.theDatabase.put(source);
+	await this.theDatabase.put(source, true);
 	response.write(JSON.stringify({'result' : 'added',
-				       'name' : source}));
+				       'name' : source
+				      'value' : true}));
 	response.end();
     }
 
@@ -85,20 +86,21 @@ export class MyServer {
     }
 
     public async readSource(source: string, response) : Promise<void> {
-	let value = await this.theDatabase.get(name);
+	let value = await this.theDatabase.get(source);
 	response.write(JSON.stringify({'result' : 'read',
 				       'name' : source,
+				       'value' : value
 		}));
 	response.end();
     }
 
-    /*public async updateCounter(name: string, value: number, response) : Promise<void> {
+    public async updateTheme(name: string, value: boolean, response) : Promise<void> {
 	await this.theDatabase.put(name, value);
 	response.write(JSON.stringify({'result' : 'updated',
 				       'name' : name,
 				       'value' : value }));
 	response.end();
-    }*/
+    }
     
     public async deleteSource(source : string, response) : Promise<void> {
 	await this.theDatabase.del(source);
