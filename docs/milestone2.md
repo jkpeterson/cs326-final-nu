@@ -1,15 +1,26 @@
-## Requests Users Can Make
+# Corona Watch by Team Nu  
 
-Enter Username
+## Team Overview
+Julia Peterson ([jkpeterson](https://github.com/jkpeterson))    
+Robert Powell ([ParsnipPizza](https://github.com/ParsnipPizza))  
+Sheikh Noohery ([noohery](https://github.com/noohery))  
 
-Add to their list of websites to grab headlines from
+## API Documentation
+Users with account can make these requests:
++ Enter username and password to log in
++ Add to their list of websites to grab headlines from
++ Select Dark or Light Mode
 
-Select Dark or Light Mode
+| Parameters    | Description  |
+| ------------- |--------------|
+| userName      | (Required) user's unique ID |
+| websites      | List of websites the user retrieves headlines from |
+| darkTheme     | True will change the website colors, false will have them remain normal |
 
-## Parameters
+## Front-end Implementation
+"please take four screenshots with a brief description for your user interface to illustrate each of the Create, Read, Update, and Delete operations and include them in your docs/milestone2.md."
 
-Username: Will be the user's unique ID
+## Deployment
+The URL of your Heroku Application
 
-Content List: List of websites the user retrieves headlines from
-
-Dark Mode: True will change the website colors, false will have them remain normal
+## Division of Labor
