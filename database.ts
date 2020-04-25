@@ -54,7 +54,20 @@ export class Database {
 		console.log("result = " + result);
     }
 
-    public async getWebsites(userName: string) : Promise<string> {
+	public async get(userName: string) : Promise<string> {
+		let db = this.client.db(this.dbName);
+		let collection = db.collection(this.collectionName);
+		console.log("get: userName = " + userName);
+		let result = await collection.findOne({'userName' : userName});
+		console.log("get: returned " + JSON.stringify(result));
+		if (result) {
+			return result.value;
+		} else {
+			return null;
+		}
+	}
+
+	public async getWebsites(userName: string) : Promise<string> {
 		let db = this.client.db(this.dbName);
 		let collection = db.collection(this.collectionName);
 		console.log("get: userName = " + userName);
