@@ -46,7 +46,7 @@ export class Database {
             this.uri = JSON.parse(uriFromFile.uri);
         }
     }
-    public async put(userName: string, websites: {}, darkTheme: boolean) : Promise<void> {
+    public async put(userName: string, websites: Array<String>, darkTheme: boolean) : Promise<void> {
 		let db = this.client.db(this.dbName);
 		let collection = db.collection(this.collectionName);
 		console.log("put: userName = " + userName + ", websites = " + websites + ", darkTheme = " + darkTheme);
@@ -54,11 +54,25 @@ export class Database {
 		console.log("result = " + result);
     }
 
-    public async get(userName: string) : Promise<string> {
+    public async getWebsites(userName: string) : Promise<string> {
 		let db = this.client.db(this.dbName);
 		let collection = db.collection(this.collectionName);
 		console.log("get: userName = " + userName);
-		let result = await collection.findOne({'userName' : userName });
+		let result = await collection.findOne({'userName' : userName}, {'websites': 1, 'darkTheme' : 0});
+		console.log("get: returned " + JSON.stringify(result));
+		if (result) {
+			return result.value;
+		} else {
+			return null;
+		}
+	}
+	
+	public async getTheme(userName: string) : Promise<string> {
+		let db = this.client.db(this.dbName);
+		let collection = db.collection(this.collectionName);
+		console.log("get: userName = " + userName);
+		let result = await collection.findOne({'userName' : userName}, { 'websites': 0, 'darkTheme' : 1});
+		
 		console.log("get: returned " + JSON.stringify(result));
 		if (result) {
 			return result.value;
