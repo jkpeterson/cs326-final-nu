@@ -26,17 +26,16 @@ export class MyServer {
 	this.server.use(express.json());
 
 	// Set a single handler for a route.
-	this.router.post('/users/:userId/create', this.createHandler.bind(this));
+	this.router.post('/users/:userId/user', this.userHandler.bind(this));
 	// Set multiple handlers for a route, in sequence.
-	this.router.post('/users/:userId/read',   [this.errorHandler.bind(this), this.readHandler.bind(this) ]);
-	/*this.router.post('/users/:userId/update', [this.errorHandler.bind(this), this.updateHandler.bind(this)]);*/
-	this.router.post('/users/:userId/delete', [this.errorHandler.bind(this), this.deleteHandler.bind(this)]);
-	// Set a fall-through handler if nothing matches.
+	this.router.post('/users/:userId/addSource',   [this.errorHandler.bind(this), this.sourceHandler.bind(this) ]);
+	this.router.post('/users/:userId/changeTheme', [this.errorHandler.bind(this), this.themeHandler.bind(this)]);
+	
 	this.router.post('*', async (request, response) => {
 	    response.send(JSON.stringify({ "result" : "command-not-found" }));
 	});
-	// Start up the counter endpoint at '/counter'.
-	this.server.use('/counter', this.router);
+	// Start up the user endpoint at '/user'.
+	this.server.use('/user', this.router);
     }
 
     private async errorHandler(request, response, next) : Promise<void> {
@@ -50,63 +49,50 @@ export class MyServer {
 	}
     }
     
-    private async createHandler(request, response) : Promise<void> {
-	await this.addNewsource(request.params['userId']+"-"+request.body.source, response);
+    private async userHandler(request, response) : Promise<void> {
+	await this.addUser(request.params['userId']+"-"+request.body.source, response);
     }
 
-    private async readHandler(request, response): Promise<void> {
+    private async sourceHandler(request, response): Promise<void> {
 	console.log(request.params['userId']);
-	await this.readSource(request.params['userId']+"-"+request.body.source, response);
+	await this.addSource(request.params['userId']+"-"+request.body.usernName, request.body.website, response);
    }
     
-	private async updateHandler(request, response) : Promise<void> {
-	await this.updateTheme(request.params['userId']+"-"+request.body.name, request.body.value, response);
+	private async themeHandler(request, response) : Promise<void> {
+	await this.changeTheme(request.params['userId']+"-"+request.body.userName, request.body.theme, response);
     } 
-
-    private async deleteHandler(request, response) : Promise<void> {
-	await this.deleteSource(request.params['userId']+"-"+request.body.source, response);
-    }
 
     public listen(port) : void  {
 	this.server.listen(port);
     }
 
-    public async addNewsource(source: string, response) : Promise<void> {
-	console.log("Added Source: " + source);
-	await this.theDatabase.put(source, true);
+    public async addUser(userName: string, response) : Promise<void> {
+	console.log("User Name: " + userName);
+	await this.theDatabase.put(userName, true);
 	response.write(JSON.stringify({'result' : 'added',
-				       'name' : source,
-				      'value' : true}));
+					   'User Name' : userName}));
 	response.end();
     }
 
-    public async errorSource(source: string, response) : Promise<void> {
+    public async errorUser(source: string, response) : Promise<void> {
 	response.write(JSON.stringify({'result': 'error'}));
 	response.end();
     }
 
-    public async readSource(source: string, response) : Promise<void> {
-	let value = await this.theDatabase.get(source);
-	response.write(JSON.stringify({'result' : 'read',
-				       'name' : source,
-				       'value' : value
-		}));
-	response.end();
-    }
+	public async addSource(userName: string, website: string, response) : Promise<void> {
+		await this.theDatabase.put(userName, website);
+		response.write(JSON.stringify({'result' : 'updated',
+						   'User Name' : userName,
+						   'Website' : website}));
+		response.end();
+	}
 
-    public async updateTheme(name: string, value: boolean, response) : Promise<void> {
-	await this.theDatabase.put(name, value);
-	response.write(JSON.stringify({'result' : 'updated',
-				       'name' : name,
-				       'value' : value }));
-	response.end();
-    }
-    
-    public async deleteSource(source : string, response) : Promise<void> {
-	await this.theDatabase.del(source);
-	response.write(JSON.stringify({'result' : 'deleted',
-				       'value'  : source }));
-	response.end();
-    }
+    public async changeTheme(userName: string, theme: boolean, response) : Promise<void> {
+		await this.theDatabase.put(name, theme);
+		response.write(JSON.stringify({'result' : 'updated',
+						'User Name' : name,
+						'Theme' : theme}));
+		response.end();
+    }  
 }
 
