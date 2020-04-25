@@ -51,20 +51,20 @@ export class MyServer {
     }
     
     private async createHandler(request, response) : Promise<void> {
-	await this.createCounter(request.params['userId']+"-"+request.body.source, response);
+	await this.addNewsource(request.params['userId']+"-"+request.body.source, response);
     }
 
     private async readHandler(request, response): Promise<void> {
 	console.log(request.params['userId']);
-	await this.readCounter(request.params['userId']+"-"+request.body.source, response);
+	await this.readSource(request.params['userId']+"-"+request.body.source, response);
    }
     
 	private async updateHandler(request, response) : Promise<void> {
-	await this.updateCounter(request.params['userId']+"-"+request.body.name, request.body.value, response);
+	await this.updateTheme(request.params['userId']+"-"+request.body.name, request.body.value, response);
     } 
 
     private async deleteHandler(request, response) : Promise<void> {
-	await this.deleteCounter(request.params['userId']+"-"+request.body.source, response);
+	await this.deleteSource(request.params['userId']+"-"+request.body.source, response);
     }
 
     public listen(port) : void  {
@@ -75,7 +75,7 @@ export class MyServer {
 	console.log("Added Source: " + source);
 	await this.theDatabase.put(source, true);
 	response.write(JSON.stringify({'result' : 'added',
-				       'name' : source
+				       'name' : source,
 				      'value' : true}));
 	response.end();
     }
