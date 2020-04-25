@@ -20,6 +20,8 @@ Users with account can make these requests:
 ## Front-end Implementation
 "please take four screenshots with a brief description for your user interface to illustrate each of the Create, Read, Update, and Delete operations and include them in your docs/milestone2.md."
 
+After many attempts prior to the deadline, we ultimately could not get the project to deploy properly on heroku on time, so we do not have a link as of this time 
+
 ## Deployment
 The URL of your Heroku Application
 
