@@ -46,14 +46,31 @@ export class Database {
             this.uri = JSON.parse(uriFromFile.uri);
         }
     }
-    public async put(userName: string, websites: Array<String>, darkTheme: boolean) : Promise<void> {
+    public async putUser(userName: string) : Promise<void> {
 		let db = this.client.db(this.dbName);
 		let collection = db.collection(this.collectionName);
-		console.log("put: userName = " + userName + ", websites = " + websites + ", darkTheme = " + darkTheme);
-		let result = await collection.updateOne({'userName' : userName}, { $set : { 'websites' : websites} }, {'darkTheme' : darkTheme}, { 'upsert' : true } );
+		console.log("put: userName = " + userName);
+		let result = await collection.updateOne({'userName' : userName}, { $set : {'darkTheme' : false} }, { 'upsert' : true } );
+		console.log("result = " + result);
+	}
+	
+	public async putSource(userName: string, website: string) : Promise<void> {
+		let db = this.client.db(this.dbName);
+		let collection = db.collection(this.collectionName);
+		console.log("put: userName = " + userName + " website = " + website);
+		let result = await collection.updateOne({'userName' : userName}, { $set : {websites: [website]}});
+		console.log("result = " + result);
+	}
+	
+	public async putTheme(userName: string, darkTheme: boolean) : Promise<void> {
+		let db = this.client.db(this.dbName);
+		let collection = db.collection(this.collectionName);
+		console.log("put: userName = " + userName + " darkTheme = " + darkTheme);
+		let result = await collection.updateOne({'userName' : userName}, { $set : {'darkTheme' : darkTheme}});
 		console.log("result = " + result);
     }
 
+	//if needed just in case
 	public async get(userName: string) : Promise<string> {
 		let db = this.client.db(this.dbName);
 		let collection = db.collection(this.collectionName);
@@ -66,7 +83,6 @@ export class Database {
 			return null;
 		}
 	}
-
 	public async getWebsites(userName: string) : Promise<string> {
 		let db = this.client.db(this.dbName);
 		let collection = db.collection(this.collectionName);
@@ -93,7 +109,8 @@ export class Database {
 			return null;
 		}
     }
-    
+	
+	//for future use
     public async del(userName: string) : Promise<void> {
 	let db = this.client.db(this.dbName);
 	let collection = db.collection(this.collectionName);

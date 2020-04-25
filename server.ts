@@ -59,7 +59,7 @@ export class MyServer {
    }
     
 	private async themeHandler(request, response) : Promise<void> {
-	await this.changeTheme(request.params['userId']+"-"+request.body.userName, request.body.theme, response);
+	await this.changeTheme(request.params['userId']+"-"+request.body.userName, request.body.darkTheme, response);
     } 
 
     public listen(port) : void  {
@@ -68,30 +68,30 @@ export class MyServer {
 
     public async addUser(userName: string, response) : Promise<void> {
 	console.log("User Name: " + userName);
-	await this.theDatabase.put(userName, true);
+	await this.theDatabase.putUser(userName, true);
 	response.write(JSON.stringify({'result' : 'added',
 					   'User Name' : userName}));
 	response.end();
     }
 
-    public async errorUser(source: string, response) : Promise<void> {
+    public async errorUser(userName: string, response) : Promise<void> {
 	response.write(JSON.stringify({'result': 'error'}));
 	response.end();
     }
 
 	public async addSource(userName: string, website: string, response) : Promise<void> {
-		await this.theDatabase.put(userName, website);
+		await this.theDatabase.putSource(userName, website);
 		response.write(JSON.stringify({'result' : 'updated',
 						   'User Name' : userName,
 						   'Website' : website}));
 		response.end();
 	}
 
-    public async changeTheme(userName: string, theme: boolean, response) : Promise<void> {
-		await this.theDatabase.put(name, theme);
+    public async changeTheme(userName: string, darkTheme: boolean, response) : Promise<void> {
+		await this.theDatabase.putTheme(name, darkTheme);
 		response.write(JSON.stringify({'result' : 'updated',
 						'User Name' : name,
-						'Theme' : theme}));
+						'Theme' : darkTheme}));
 		response.end();
     }  
 }
