@@ -27,5 +27,5 @@ The URL of your Heroku Application
 
 ## Division of Labor
 Julia Peterson: milestone2.md, server.ts, and database.ts     
-Robert Powell: html, clientFinalProject.js, server.ts, and database.ts 
+Robert Powell: html, clientFinalProject.js, server.ts, and database.ts.  
 Sheikh Noohery: html, milestone2.md, server.ts, and database.ts  
