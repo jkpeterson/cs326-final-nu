@@ -1,1 +1,1 @@
-web: node server-main.ts
+web: node server-main.js
