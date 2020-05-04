@@ -1,0 +1,31 @@
+{
+  "name": "cs326-final-nu",
+  "version": "1.0.0",
+  "description": "Team Nu's Final Project",
+  "main": "server-main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkpeterson/cs326-final-nu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkpeterson/cs326-final-nu/issues"
+  },
+  "homepage": "https://github.com/jkpeterson/cs326-final-nu#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.6",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.2"
+  }
+}
