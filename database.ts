@@ -11,8 +11,8 @@ export class Database {
     util = require('util');
     fs = require('fs');
     //JSONfile = './secreturi.json';
-    newExists = this.util.promisify(this.fs.exists);
-    newReadFile = this.util.promisify(this.fs.readFile);
+    //newExists = this.util.promisify(this.fs.exists);
+    //newReadFile = this.util.promisify(this.fs.readFile);
     
     constructor(collectionName) {
 	this.collectionName = collectionName;
@@ -40,12 +40,12 @@ export class Database {
 	    await this.client.connect().catch(err => { console.log(err); });
 	})();
     }
-    public async reload(filename) {
-        if (await this.newExists(filename)) {
-            //let uriFromFile = await this.newReadFile(filename, 'utf8');
-            //this.uri = JSON.parse(uriFromFile.uri);
-        }
-    }
+    // public async reload(filename) {
+    //     if (await this.newExists(filename)) {
+    //         //let uriFromFile = await this.newReadFile(filename, 'utf8');
+    //         //this.uri = JSON.parse(uriFromFile.uri);
+    //     }
+    // }
     public async putUser(userName: string) : Promise<void> {
 		let db = this.client.db(this.dbName);
 		let collection = db.collection(this.collectionName);

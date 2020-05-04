@@ -37,15 +37,16 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var Database = /** @class */ (function () {
+    //JSONfile = './secreturi.json';
+    //newExists = this.util.promisify(this.fs.exists);
+    //newReadFile = this.util.promisify(this.fs.readFile);
     function Database(collectionName) {
         var _this = this;
         this.MongoClient = require('mongodb').MongoClient;
+        this.uri = process.env.SECRET_URI;
         this.dbName = "teamnu";
         this.util = require('util');
         this.fs = require('fs');
-        this.JSONfile = './secreturi.json';
-        this.newExists = this.util.promisify(this.fs.exists);
-        this.newReadFile = this.util.promisify(this.fs.readFile);
         this.collectionName = collectionName;
         this.client = new this.MongoClient(this.uri, { useNewUrlParser: true });
         // Open up a connection to the client.
@@ -77,24 +78,12 @@ var Database = /** @class */ (function () {
             });
         }); })();
     }
-    Database.prototype.reload = function (filename) {
-        return __awaiter(this, void 0, void 0, function () {
-            var uriFromFile;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.newExists(filename)];
-                    case 1:
-                        if (!_a.sent()) return [3 /*break*/, 3];
-                        return [4 /*yield*/, this.newReadFile(filename, 'utf8')];
-                    case 2:
-                        uriFromFile = _a.sent();
-                        this.uri = JSON.parse(uriFromFile.uri);
-                        _a.label = 3;
-                    case 3: return [2 /*return*/];
-                }
-            });
-        });
-    };
+    // public async reload(filename) {
+    //     if (await this.newExists(filename)) {
+    //         //let uriFromFile = await this.newReadFile(filename, 'utf8');
+    //         //this.uri = JSON.parse(uriFromFile.uri);
+    //     }
+    // }
     Database.prototype.putUser = function (userName) {
         return __awaiter(this, void 0, void 0, function () {
             var db, collection, result;
