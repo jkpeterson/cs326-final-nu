@@ -3,14 +3,14 @@ import { readFile } from "fs";
 export class Database {
 
     private MongoClient = require('mongodb').MongoClient;
-    private uri;
+    private uri = process.env.SECRETURI;
     private client;
     private collectionName : string;
     private dbName : string = "teamnu";
     
     util = require('util');
     fs = require('fs');
-    JSONfile = './secreturi.json';
+    //JSONfile = './secreturi.json';
     newExists = this.util.promisify(this.fs.exists);
     newReadFile = this.util.promisify(this.fs.readFile);
     
@@ -42,8 +42,8 @@ export class Database {
     }
     public async reload(filename) {
         if (await this.newExists(filename)) {
-            let uriFromFile = await this.newReadFile(filename, 'utf8');
-            this.uri = JSON.parse(uriFromFile.uri);
+            //let uriFromFile = await this.newReadFile(filename, 'utf8');
+            //this.uri = JSON.parse(uriFromFile.uri);
         }
     }
     public async putUser(userName: string) : Promise<void> {
