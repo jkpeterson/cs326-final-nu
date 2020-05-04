@@ -3,7 +3,7 @@ import { readFile } from "fs";
 export class Database {
 
     private MongoClient = require('mongodb').MongoClient;
-    private uri = process.env.SECRETURI;
+    private uri = process.env.SECRET_URI;
     private client;
     private collectionName : string;
     private dbName : string = "teamnu";
