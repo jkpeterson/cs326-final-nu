@@ -24,5 +24,7 @@ Quick note: we previously had worked on much of the back end implementation for 
 
 ## Division of Labor
 Julia Peterson: server.ts, package.json, database.ts, secrets.json
+
 Robert Powell: milestome3.md, database.ts.
+
 Sheikh Noohery: server.ts, database.ts
