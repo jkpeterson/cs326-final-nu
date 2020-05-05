@@ -44,7 +44,6 @@ var MyServer = /** @class */ (function () {
         var _this = this;
         // Server stuff: use express instead of http.createServer
         this.server = express();
-        this.port = process.env.PORT;
         this.router = express.Router();
         this.theDatabase = db;
         // from https://enable-cors.org/server_expressjs.html
@@ -55,7 +54,7 @@ var MyServer = /** @class */ (function () {
             next();
         });
         // Serve static pages from a particular path.
-        this.server.use('/', express.static('./html'));
+        this.server.use('/', express.static('./static'));
         // NEW: handle POST in JSON format
         this.server.use(express.json());
         // Set a single handler for a route.

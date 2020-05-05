@@ -37,16 +37,22 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var Database = /** @class */ (function () {
-    //JSONfile = './secreturi.json';
-    //newExists = this.util.promisify(this.fs.exists);
-    //newReadFile = this.util.promisify(this.fs.readFile);
     function Database(collectionName) {
         var _this = this;
         this.MongoClient = require('mongodb').MongoClient;
-        this.uri = process.env.SECRET_URI;
         this.dbName = "teamnu";
         this.util = require('util');
         this.fs = require('fs');
+        this.JSONfile = './secreturi.json';
+        this.newExists = this.util.promisify(this.fs.exists);
+        this.newReadFile = this.util.promisify(this.fs.readFile);
+        if (!process.env.SECRET_URI) {
+            this.secrets = require('./secreturi.json');
+            this.uri = this.secrets.uri;
+        }
+        else {
+            this.uri = process.env.SECRET_URI;
+        }
         this.collectionName = collectionName;
         this.client = new this.MongoClient(this.uri, { useNewUrlParser: true });
         // Open up a connection to the client.
@@ -78,12 +84,6 @@ var Database = /** @class */ (function () {
             });
         }); })();
     }
-    // public async reload(filename) {
-    //     if (await this.newExists(filename)) {
-    //         //let uriFromFile = await this.newReadFile(filename, 'utf8');
-    //         //this.uri = JSON.parse(uriFromFile.uri);
-    //     }
-    // }
     Database.prototype.putUser = function (userName) {
         return __awaiter(this, void 0, void 0, function () {
             var db, collection, result;
