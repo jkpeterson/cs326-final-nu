@@ -20,6 +20,8 @@ userTheme: Boolean //True means its in dark/night theme, False is the light/day 
 ## Deployment
 The URL of your Heroku Application
 
+https://arcane-plains-96366.herokuapp.com/index.html
+
 Quick note: we previously had worked on much of the back end implementation for Milestone 2 as well as the front end, as a result we were able to focus on ironing out the heroku and delpoyment issues we had for M2, as well as  
 
 ## Division of Labor
