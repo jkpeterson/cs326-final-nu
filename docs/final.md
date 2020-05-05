@@ -1,9 +1,12 @@
 # Corona Watch by Team Nu
 
-## Team Overview
-Julia Peterson ([jkpeterson](https://github.com/jkpeterson))
-Robert Powell ([ParsnipPizza](https://github.com/ParsnipPizza))  
-Sheikh Noohery ([noohery](https://github.com/noohery))  
+## Team
+Julia Peterson ([jkpeterson](https://github.com/jkpeterson))  
+Robert Powell ([ParsnipPizza](https://github.com/ParsnipPizza))    
+Sheikh Noohery ([noohery](https://github.com/noohery))    
+
+## Project Overview
+Our web application helps people stay informed about the COVID-19 pandemic. It includes a news feed featuring recent articles about COVID-19 from a variety of sources. It also features a timeline showing the increases in cases in various selectable states on a map of the United States. This timeline also features articles about actions the governments of these states have taken and when.
 
 ## Database Implementation:
 Using MongoDB, the database will store 3 aspects: 
@@ -25,6 +28,8 @@ Quick note: we previously had worked on much of the back end implementation for 
 ## Division of Labor
 Julia Peterson: server.ts, package.json, database.ts, secrets.json
 
-Robert Powell: milestome3.md, database.ts.
+Robert Powell: final.md, database.ts.
 
-Sheikh Noohery: server.ts, database.ts
+Sheikh Noohery: final.md, server.ts, database.ts 
+
+## Conclusion
