@@ -27,4 +27,4 @@ Julia Peterson: server.ts, package.json, database.ts, secrets.json
 
 Robert Powell: milestone3.md, database.ts.
 
-Sheikh Noohery: server.ts, database.ts 
+Sheikh Noohery: setup.md, server.ts, database.ts 
