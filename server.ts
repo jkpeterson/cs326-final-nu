@@ -8,7 +8,6 @@ export class MyServer {
 
     // Server stuff: use express instead of http.createServer
     private server = express();
-    private port = process.env.PORT;
     private router = express.Router();
 
     constructor(db) {
@@ -21,7 +20,7 @@ export class MyServer {
 	    next();
 	});
 	// Serve static pages from a particular path.
-	this.server.use('/', express.static('./html'));
+	this.server.use('/', express.static('./static'));
 	// NEW: handle POST in JSON format
 	this.server.use(express.json());
 
