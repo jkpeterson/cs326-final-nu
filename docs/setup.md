@@ -1,6 +1,6 @@
 ## Steps for deploying the project
 1. Open terminal and use cd to change the workspace to project directory.
-2. type in the following commans in terminal:
+2. Type in the following commans in terminal:
     - `npm init -y`
     - `sudo npm install -g mongodb`
     - `sudo npm install -g typescript`
