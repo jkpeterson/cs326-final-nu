@@ -15,7 +15,9 @@ A final up-to-date list/table describing your application’s user interface. Th
 
 ### View 1: Options Page
 
-![News Center Image](static/images/news_center.png)  
+<img src="news_center.png"
+     alt="Options View"/>
+
 This page allows users to log-in to their account with their username and password. Here they can lookup sources to add to their custom newsfeed and switch between night and day theme. 
 
 ### View 2:
