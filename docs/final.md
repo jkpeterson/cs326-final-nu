@@ -15,18 +15,18 @@ A final up-to-date list/table describing your application’s user interface. Th
 
 ### View 1: Options Page
 
-<img src="news_center.png"
+<img src="images/news_center.png"
      alt="Options View"/>
 
 This page allows users to log-in to their account with their username and password. Here they can lookup sources to add to their custom newsfeed and switch between night and day theme. 
 
 ### View 2:
-<img src = "map_view.png" alt = "Map View"/>
+<img src = "images/map_view.png" alt = "Map View"/>
 
 This page has a live map of coronavirus cases in the US, pulling from a major news outlet. Clicking on the link below allows users ot go to the source and see their data, additional breakdowns, etc.
 
 ### View 3: 
-<img src = "Newsfeed_view.png" alt = "Newsfeed View"/>
+<img src = "images/Newsfeed_view.png" alt = "Newsfeed View"/>
 
 This has the currated news feed, its limited to the sources all users have, unless they have an account, in which they can add any source even if it isn't in the default list.
 
