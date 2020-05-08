@@ -45,15 +45,18 @@ Users with account can make these requests:
 
 ## Database
 
-A final up-to-date representation of your database including a brief description of each of the entities in your data model and their relationships if any.
-URL Routes/Mappings: A final up-to-date table of all the URL routes that your application supports and a short description of what those routes are used for. You should also indicate any authentication and permissions on those routes.
+The database holds the above information and associates it with a username, similar to the counter example completed in class.
+
+## URL Routes/Mapping
+/userId/addSource to add sources to a user's array
+/userId/change theme to change from light to dark mode and vicer versa
 
 
 ## Division of Labor
 
 for the entire project  
 
-Julia Peterson: 
+Julia Peterson: The wireframes, the backend code for the database and server, getting the project to function on heroku, bug fixes.
 
 Robert Powell: Worked on mockup and later prototype HTML and CSS, helped with database connection and data types, deploying on Heroku
 
@@ -63,7 +66,7 @@ Sheikh Noohery: contributed to the database setup, main server, settings page ht
 
 A conclusion describing your team’s experience in working on this project. This should include what you learned through the design and implementation process, the difficulties you encountered, what your team would have liked to know before starting the project that would have helped you later, and any other technical hurdles that your team encountered.
 
-Julia Peterson:  
+Julia Peterson:  This was a rather difficult project.  I had to learn Javascript with no prior knowledge this semester and then apply this new skill towards creating a final project.  These difficulties were also greatly amplified by pandemic.  Overall, I ended up doing a lot of work on the backend, both the database and the server, and this was very tricky and mostly new to me.  I had to often take the initiative to learn new things and do lots of research to complete what I needed to do.  This project felt a lot like the equivalent of being thrown into the deep end of a pool.  However, this wasn't all bad, it helped me to learn a lot and apply my skills in a way I otherwise never would have.  I wish that I could have had a more complete project at the end, but I think that myself and my teammates reached the limits of our abilities in some ways.  With more time and better circumstances, I think we definitely would have a better finished product.  However, given the circumstances I'm proud of the work I still managed to put in, and I'm thankful for my teammates, the TAs, and the professor for their support.
 
 Robert Powell: This was already a little tricky before everyone had to go home, but eventually we ran into problems deploying, as well as adapting the given database and server code. I appreciated the effort Emery and the TAs took to smooth this obstacle over, its not their fault Zoom calls talking about connecting databases or website connections are less effective (Much like how we were unable to use authentication).  With more in-person/on campus help and time, I think we would have been able to implement far more of our features. This is not anything against our team, Julia and Noohery were great to work with, we were effective when things were working and made sense, and our general idea was a good one, with potential. I did learn a ton through this project: how to implement TS and JS, how to launch a project on Heroku along with the other concepts we learned in 326. Overall, good group, if given another chance in different circumstances, I think we'd have a much more finished result. As it is, I'm at least proud of how much our group did get accomplished, given our difficulties.
 
