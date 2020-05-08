@@ -21,8 +21,14 @@ A final up-to-date list/table describing your application’s user interface. Th
 This page allows users to log-in to their account with their username and password. Here they can lookup sources to add to their custom newsfeed and switch between night and day theme. 
 
 ### View 2:
+<img src = "map_view.png" alt = "Map View"/>
+
+This page has a live map of coronavirus cases in the US, pulling from a major news outlet. Clicking on the link below allows users ot go to the source and see their data, additional breakdowns, etc.
 
 ### View 3: 
+<img src = "Newsfeed_view.png" alt = "Newsfeed View"/>
+
+This has the currated news feed, its limited to the sources all users have, unless they have an account, in which they can add any source even if it isn't in the default list.
 
 ## APIs
 
@@ -49,7 +55,7 @@ for the entire project
 
 Julia Peterson: 
 
-Robert Powell: 
+Robert Powell: Worked on mockup and later prototype HTML and CSS, helped with database connection and data types, deploying on Heroku
 
 Sheikh Noohery: contributed to the database setup, main server, settings page html, and the markdown files for each milestones
 
@@ -59,6 +65,6 @@ A conclusion describing your team’s experience in working on this project. Thi
 
 Julia Peterson:  
 
-Robert Powell: 
+Robert Powell: This was already a little tricky before everyone had to go home, but eventually we ran into problems deploying, as well as adapting the given database and server code. I appreciated the effort Emery and the TAs took to smooth this obstacle over, its not their fault Zoom calls talking about connecting databases or website connections are less effective (Much like how we were unable to use authentication).  With more in-person/on campus help and time, I think we would have been able to implement far more of our features. This is not anything against our team, Julia and Noohery were great to work with, we were effective when things were working and made sense, and our general idea was a good one, with potential. I did learn a ton through this project: how to implement TS and JS, how to launch a project on Heroku along with the other concepts we learned in 326. Overall, good group, if given another chance in different circumstances, I think we'd have a much more finished result. As it is, I'm at least proud of how much our group did get accomplished, given our difficulties.
 
 Sheikh Noohery: It was a bit stressful to work on the project from home due to COVID-19. However, I learned a lot from working on the project with my teammates. First, I learned how to use GitHub properly using the terminal. I have never used git before so that part of the experience was new for me. I also learned how to use bootstrap and will be using it every time I make an HTML page. The most difficult part for me and my teammates was the back-end. I wish we spent more time in class understanding how the different databases are manipulated with typescript. It was challenging to take what we learned in the class exercises and apply them to our database. Nevertheless, I can still create a basic MongoDB database, servers, and deploy apps on Heroku. Even though I found this project challenging, I learned a lot from working on it with Julia and Griffin.
