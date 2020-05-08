@@ -12,25 +12,51 @@ Our web application helps people stay informed about the COVID-19 pandemic. It i
 ## User Interface
 
 A final up-to-date list/table describing your application’s user interface. This should include the name of the UI view and its purpose. You should include a screenshot of each of your UI views.
-APIs: A final up-to-date list/table describing your application’s API
+
+### View 1: Options Page
+
+![News Center Image](static/images/news_center.png)  
+This page allows users to log-in to their account with their username and password. Here they can lookup sources to add to their custom newsfeed and switch between night and day theme. 
+
+### View 2:
+
+### View 3: 
+
+## APIs
+
+Users with account can make these requests:
++ Enter username and password to log in
++ Add to their list of websites to grab headlines from
++ Select Dark or Light Mode
+
+| Parameters    | Description  |
+| ------------- |--------------|
+| userName      | (Required) user's unique ID |
+| websites      | List of websites the user retrieves headlines from |
+| darkTheme     | True will change the website colors, false will have them remain normal |
 
 ## Database
 
 A final up-to-date representation of your database including a brief description of each of the entities in your data model and their relationships if any.
 URL Routes/Mappings: A final up-to-date table of all the URL routes that your application supports and a short description of what those routes are used for. You should also indicate any authentication and permissions on those routes.
-Authentication/Authorization: A final up-to-date description of how users are authenticated and any permissions for specific users (if any) that you used in your application. You should mention how they relate to which UI views are accessible.
+
 
 ## Division of Labor
 
-A breakdown of the division of labor for each team member — that is, saying who did what, for the entire project. Remember that everyone is expected to contribute roughly equally to each phase of the project. We expect to see similar numbers and kinds of GitHub commits by each student.
+for the entire project  
 
-Julia Peterson: server.ts, package.json, database.ts, secrets.json
+Julia Peterson: 
 
-Robert Powell: final.md, database.ts.
+Robert Powell: 
 
-Sheikh Noohery: final.md, server.ts, database.ts 
+Sheikh Noohery: contributed to the database setup, main server, settings page html, and the markdown files for each milestones
 
 ## Conclusion
 
 A conclusion describing your team’s experience in working on this project. This should include what you learned through the design and implementation process, the difficulties you encountered, what your team would have liked to know before starting the project that would have helped you later, and any other technical hurdles that your team encountered.
 
+Julia Peterson:  
+
+Robert Powell: 
+
+Sheikh Noohery: It was a bit stressful to work on the project from home due to COVID-19. However, I learned a lot from working on the project with my teammates. First, I learned how to use GitHub properly using the terminal. I have never used git before so that part of the experience was new for me. I also learned how to use bootstrap and will be using it every time I make an HTML page. The most difficult part for me and my teammates was the back-end. I wish we spent more time in class understanding how the different databases are manipulated with typescript. It was challenging to take what we learned in the class exercises and apply them to our database. Nevertheless, I can still create a basic MongoDB database, servers, and deploy apps on Heroku. Even though I found this project challenging, I learned a lot from working on it with Julia and Griffin.
